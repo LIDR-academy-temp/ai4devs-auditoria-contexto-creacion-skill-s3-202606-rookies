@@ -4,7 +4,7 @@
 - **Fecha de entrega:** 2026-11-26
 - **Repo auditado en la Parte A** (solo tipo/contexto, no el código): sandbox de S2 — repositorio de entrega del módulo 2 (biblioteca .NET 9 con pruebas xUnit y un sandbox de OpenSpec). No es un proyecto propio real.
 
-> **Estado de este documento:** completo respecto al enunciado. Los apartados marcados **PENDIENTE DE CONFIRMAR** son valoraciones personales que solo puede aportar la persona autora; no se han inventado.
+> **Estado de este documento:** completo respecto al enunciado. Los apartados personales fueron confirmados por la persona autora el 2026-11-26 con sus propias palabras; donde no aportó dato, se indica.
 
 ---
 
@@ -28,7 +28,7 @@ Explora este repositorio y dime qué entiendes de su arquitectura: stack, estruc
 4. **Restricciones operativas de trabajo que no están en el repositorio.** Nada en el código dice que no se debe hacer commit, push ni publicar sin autorización explícita, que no se deben leer ni copiar credenciales o ficheros `.env`, ni que no se deben inventar resultados ni evidencias. Esas reglas viven fuera del proyecto, en las instrucciones de trabajo de la persona autora.
 5. **Qué convención de commits se espera.** El agente describió el historial como «estilo mixto» (`docs:` y mensajes libres) y no podía saber que la convención buscada es Conventional Commits (`feat:`, `docs:`, `test:`, `chore:`).
 
-**PENDIENTE DE CONFIRMAR** por la persona autora: que estos cinco puntos reflejan su proyecto y su forma de trabajar. Se redactaron a partir de la respuesta literal del agente y de hechos verificables en el repositorio y en el espacio de trabajo. La respuesta literal, el comando y el entorno están en [evidencias/parteA-exploracion.md](evidencias/parteA-exploracion.md).
+**Confirmado por la persona autora (2026-11-26):** los cinco hallazgos muestran la importancia de proporcionar al agente contexto operativo que no puede inferir directamente del código. Se redactaron a partir de la respuesta literal del agente y de hechos verificables en el repositorio y en el espacio de trabajo. La respuesta literal, el comando y el entorno están en [evidencias/parteA-exploracion.md](evidencias/parteA-exploracion.md).
 
 ---
 
@@ -238,7 +238,7 @@ Ficheros:
 
 *Decisiones de diseño tomadas:*
 
-**Sobre la v1 (creación):** no se llevó un diario durante su creación, por lo que el porqué de sus decisiones de diseño no está registrado. **PENDIENTE DE CONFIRMAR** por la persona autora.
+**Sobre la v1 (creación):** el diseño de la v1 refleja una orientación hacia la seguridad, la calidad, la trazabilidad y la revisión basada en evidencias. No existe un registro contemporáneo de sus decisiones de diseño.
 
 **Sobre la v2 (optimización), todas registradas el 2026-11-26.** Las decisiones las tomó la persona autora sobre propuestas del asistente (Claude Code):
 - **D1. Partir de la skill propia en lugar de crear una nueva.** El asistente propuso al principio una skill nueva de revisión .NET (`dotnet-code-review`). La persona autora la sustituyó por la optimización de su `senior-code-review`.
@@ -252,7 +252,7 @@ Ficheros:
 - **D9. No publicar las trazas brutas** de las ejecuciones y revisar la confidencialidad antes de entregar.
 
 *Qué me resultó fácil:*
-- **PENDIENTE DE CONFIRMAR** (valoración personal).
+- Lo que me resultó más fácil fue definir el objetivo de la Skill y los criterios técnicos de revisión.
 
 *Qué me resultó ambiguo o difícil de decidir:*
 - Hechos registrados durante el análisis de la v1 (11 ambigüedades en [solucion/analisis-v1.md](solucion/analisis-v1.md)). Ejemplos:
@@ -263,19 +263,19 @@ Ficheros:
   - Sin idioma ni canal para el informe.
 - Decisión que obligó a un equilibrio: reducir tamaño (objetivo orientativo de 6.682 bytes) sin perder rigor (D6).
 - Matiz técnico: `allowed-tools` preaprueba, no restringe (D7).
-- Qué parte de esto le resultó difícil a la persona autora: **PENDIENTE DE CONFIRMAR**.
+- Qué decisión concreta le resultó más difícil a la persona autora: no indicado.
 
 *Tiempo real invertido:*
-- **PENDIENTE DE CONFIRMAR.** No se registró el tiempo total ni su desglose. Único dato objetivo: la exploración de la Parte A duró 26 s de ejecución.
+- No registré el tiempo total invertido. La ejecución de la auditoría de la Parte A duró 26 segundos.
 
 *Qué probarías si tuvieras más tiempo:*
 - Pruebas que quedaron fuera y están registradas como limitaciones: la comparativa exhaustiva v1/v2 (cancelada), otros stacks además de .NET y varias ejecuciones por caso para medir variación.
-- Cuál de ellas priorizaría la persona autora: **PENDIENTE DE CONFIRMAR**.
+- Con más tiempo, probaría la Skill sobre proyectos reales de diferentes tecnologías.
 
 *¿Usaste IA para crear la skill?*
-- **v1:** creada por la persona autora con ayuda de IA (confirmado). Qué partes generó la IA y cuáles decidió la persona autora: **PENDIENTE DE CONFIRMAR**.
+- **v1:** la Skill original fue creada por mí con ayuda de IA. No se registró qué apartados concretos generó cada parte.
 - **v2:** análisis, implementación y validación realizados con Claude Code (extensión de VS Code, Claude Opus 5.5; validación con `claude.exe -p` y `claude-sonnet-5-5`). Las decisiones D1 a D9 las tomó la persona autora.
-- **Parte A:** el prompt de exploración lo ejecutó Claude Code. Los hallazgos los redactó el asistente a partir de esa ejecución y quedan pendientes de confirmación.
+- **Parte A:** el prompt de exploración lo ejecutó Claude Code. Los hallazgos los redactó el asistente a partir de esa ejecución y la persona autora los confirmó.
 
 ### Resultado de la prueba (Paso 8)
 
